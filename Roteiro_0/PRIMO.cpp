@@ -8,7 +8,7 @@ int main() {
     cin >> n;
 
     for(int c=2; c<n; c++){
-        if(n%c==0)s=0;
+        if(n%c==0) s=0;
     }
 
     if((s == 1)&&(n > 1)) cout << "sim" << '\n'; 
