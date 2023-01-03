@@ -19,7 +19,7 @@ int main() {
         nb = 0;
         for(int c=0; c<n; c++){
             cin >> m1 >> m2;
-            if((m1+m2)%2 == 0){ na=1;nb=0;}
+            if((m1+m2)%2 == 0){na=1;nb=0;}
             else{na=0;nb=1;};
 
             answ = na > nb ? A : B;
