@@ -9,7 +9,9 @@ int main(){
     cin >> n;
 
     for(int c=0; c<n; c++){
+
         cin >> m;
+        
         a.push_back(m);
     }
 
