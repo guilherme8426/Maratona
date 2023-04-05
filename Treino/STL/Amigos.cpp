@@ -1,9 +1,10 @@
+//https://neps.academy/br/exercise/466
 #include <bits/stdc++.h>
 
 using namespace std;
 
 int main() {
-    int n, a, drua, aux, max_local, max_tot = 0;
+    int n, a,soma, idx_max, max=0, ans=0;
     cin >> n;
 
     vector<int> b(n, 0);
@@ -11,22 +12,23 @@ int main() {
     for(int i=0; i<n; i++){
         cin >> a;
         b[i] = a;
+
+        if((b[i]+b[0]+i)>max){
+            max = b[i]+b[0]+i;
+            idx_max = i;
+        }
     }
 
     for(int i=0; i<n; i++){
-        drua = 1-i;
-        max_local = 0;
-        for(int j=0; j<n; j++){
-            drua++;
-            if(i != j){
-                aux = b[j] + abs(drua) + b[i];
-                if(aux>max_local) max_local = aux;
-            }
-        }
-        if(max_local>max_tot) max_tot = max_local;
+        if(i == idx_max) continue;
+
+        soma = b[idx_max] + abs(idx_max - i) + b[i];
+        if(soma > ans)ans = soma;
+        
     }
 
-    cout << max_tot -2 << "\n";
+    
+    cout << ans << "\n";
 
 
     return 0;
