@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     int m, n, z; 
     string a;
+    
     cin >> m >> a;
 
     n = count(a.begin(), a.end(),'n');

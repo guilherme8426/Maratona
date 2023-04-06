@@ -13,7 +13,6 @@ bool verifica(string p, string t){
             if(j == lp-1) return true;
         }
     }
-
     return false;
 }
 

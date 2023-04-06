@@ -21,6 +21,7 @@ int main() {
                 ans = 'N';
                 break;
             }
+            
             if(j!=sz-1) ant = a[j];
         }
 

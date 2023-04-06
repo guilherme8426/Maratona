@@ -9,13 +9,13 @@ int main() {
     cin >> n;
     for(int i=0; i<n; i++){
         cin >> a;
-        if(a>max_1) max_1 = a;
+        if(a>max_1) max_1=a;
     }
 
     cin >> n;
     for(int i=0; i<n; i++){
         cin >> a;
-        if(a>max_2) max_2 = a;
+        if(a>max_2) max_2=a;
     }
 
     cout << max_1 << ' ' << max_2 << '\n';
