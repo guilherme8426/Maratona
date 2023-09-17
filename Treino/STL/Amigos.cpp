@@ -19,7 +19,7 @@ int main() {
     }
 
     for(int i=0; i<n; i++){
-        if(i == idx) continue;
+        if(i==idx) continue;
 
         if(max+arr[i] -(arr[0]+min(i,idx)) > ans){
             ans = max+arr[i] -(arr[0]+min(i,idx));
