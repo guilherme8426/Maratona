@@ -4,32 +4,29 @@
 using namespace std;
 
 int main() {
-    int n, a,soma, idx_max, max=0, ans=0;
+    int n, el, idx, ans=0, max=0;
     cin >> n;
-
-    vector<int> b(n, 0);
+    int arr[n];
 
     for(int i=0; i<n; i++){
-        cin >> a;
-        b[i] = a;
+        cin >> el;
+        arr[i] = el;
 
-        if((b[i]+b[0]+i)>max){
-            max = b[i]+b[0]+i;
-            idx_max = i;
+        if(arr[i]+arr[0]+i > max){
+            max = arr[i] + arr[0] +i;
+            idx = i;
         }
     }
 
     for(int i=0; i<n; i++){
-        if(i == idx_max) continue;
+        if(i == idx) continue;
 
-        soma = b[idx_max] + abs(idx_max - i) + b[i];
-        if(soma > ans)ans = soma;
-        
+        if(max+arr[i] -(arr[0]+min(i,idx)) > ans){
+            ans = max+arr[i] -(arr[0]+min(i,idx));
+        }
     }
 
-    
     cout << ans << "\n";
-
 
     return 0;
 }
