@@ -32,24 +32,7 @@ int main(){
         //  (att%n + passo)%n modulo n pois é ciclico
         }
     }
-    
 
-
-
-
-
-
-
-
-
-    // int ind = passo%n;
-    // while(n--) {
-    //     auto y = numeros.find_by_order(ind);
-    //     cout<<*y<<' ';
-    //     numeros.erase(y);
-    //     if (n) ind = (ind%n + passo)%n;
-    // } 
-    
     cout << "\n";
 
     return 0;
