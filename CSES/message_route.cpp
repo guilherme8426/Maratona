@@ -68,6 +68,7 @@ int main(){
         ans[i] = att;
         att = anterior[att];
     }
+    
     for(int i=0; i<dist[fim]; i++){
         printf("%d ", ans[i]);
     }
