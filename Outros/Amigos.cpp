@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+int main(){
     int n, el, idx, ans=0, max=0;
     cin >> n;
     int arr[n];
