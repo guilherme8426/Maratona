@@ -7,6 +7,7 @@ using namespace std;
 
 ll fat[(int)1e6+10];
 ll inve[(int)1e6+10];
+vector<int> b(26,0);
 
 ll mdc(ll a, ll b) { return b == 0 ? a : mdc(b, a % b); }
 ll mmc(ll a, ll b) { return a * (b / mdc(a, b));}
@@ -28,20 +29,26 @@ void fatorialEinv(){
     }
 }
 
-ll solve(ll a, ll b){
-    return fat[a]*inve[b]%MOD*inve[a-b]%MOD;
-    // aritimetica modular 
+ll solve(ll a){
+    ll ans = fat[a];
+    for(auto n: b){
+        ans = ans*inve[n]%MOD;
+    }
+    return ans;
 }
 
 int main(){
     fatorialEinv();
 
-    ll n, a, b;
-    cin >> n;
+    int a=0;
+    char c;
 
-    while (cin >> a >> b){
-        cout << solve(a, b) << "\n";
+    while(cin >> c){ 
+        a++;
+        b[c-'a']++;
     }
+    
+    cout << solve(a) << "\n";
 
     return 0;
 }
